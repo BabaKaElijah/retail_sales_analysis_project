@@ -48,14 +48,14 @@ Sales on 2022-11-05:
 ```SELECT * FROM retail_sales WHERE sale_date = '2022-11-05';
 ```
 1. **Clothing Orders ≥ 4 in Nov 2022**:
-``SELECT * FROM retail_sales
+```SELECT * FROM retail_sales
 WHERE category = 'Clothing' AND MONTH(sale_date) = 11 AND quantity >= 4;
-``
+```
 3. **Total Sales per Category***:
-``SELECT category, SUM(total_sale) AS total_sales, COUNT(*) AS order_count
+```SELECT category, SUM(total_sale) AS total_sales, COUNT(*) AS order_count
 FROM retail_sales
 GROUP BY category;
-``
+```
 4. **Average Age for Beauty Purchases**:
 ```SELECT AVG(age) AS average_age
 FROM retail_sales
