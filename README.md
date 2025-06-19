@@ -98,7 +98,7 @@ ORDER BY average_sale DESC;
 ```
 9. **Top 5 Customers by Total Sales**:
 ```sql
-```SELECT customer_id, SUM(total_sale) AS total_spent
+SELECT customer_id, SUM(total_sale) AS total_spent
 FROM retail_sales
 GROUP BY customer_id
 ORDER BY total_spent DESC
