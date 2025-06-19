@@ -30,7 +30,7 @@ CREATE TABLE retail_sales (
   total_sale FLOAT
 );
 ```
-###🔍 Data Exploration
+##🔍 Data Exploration
 
 ```Total Sales:
 SELECT COUNT(*) AS total_sales FROM retail_sales;
@@ -41,7 +41,7 @@ SELECT COUNT(DISTINCT customer_id) FROM retail_sales;
 Available Categories:
 SELECT DISTINCT category FROM retail_sales;
 ```
-###💼 Business Questions & SQL Answers
+##💼 Business Questions & SQL Answers
 
 ```Sales on 2022-11-05:
 SELECT * FROM retail_sales WHERE sale_date = '2022-11-05';
@@ -97,7 +97,7 @@ SELECT category, COUNT(DISTINCT customer_id) AS unique_customers
 FROM retail_sales
 GROUP BY category;
 ```
-###🕒 Time Shift Analysis Using CTE
+##🕒 Time Shift Analysis Using CTE
 Shift definitions:
 
 Morning: 07:00 – 14:59
