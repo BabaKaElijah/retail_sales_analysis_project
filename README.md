@@ -43,57 +43,58 @@ SELECT DISTINCT category FROM retail_sales;
 ```
 ## 💼 Business Questions & SQL Answers
 
-```Sales on 2022-11-05:
-SELECT * FROM retail_sales WHERE sale_date = '2022-11-05';
+Sales on 2022-11-05:
 
-1. **Clothing Orders ≥ 4 in Nov 2022:
-SELECT * FROM retail_sales
+```SELECT * FROM retail_sales WHERE sale_date = '2022-11-05';
+```
+1. **Clothing Orders ≥ 4 in Nov 2022**:
+``SELECT * FROM retail_sales
 WHERE category = 'Clothing' AND MONTH(sale_date) = 11 AND quantity >= 4;
-
-2. **Total Sales per Category:
-SELECT category, SUM(total_sale) AS total_sales, COUNT(*) AS order_count
+``
+3. **Total Sales per Category***:
+``SELECT category, SUM(total_sale) AS total_sales, COUNT(*) AS order_count
 FROM retail_sales
 GROUP BY category;
-
-3. **Average Age for Beauty Purchases:
-SELECT AVG(age) AS average_age
+``
+4. **Average Age for Beauty Purchases**:
+```SELECT AVG(age) AS average_age
 FROM retail_sales
 WHERE category = 'Beauty';
-
-4. **Transactions Over 1000:
-SELECT * FROM retail_sales
+```
+5. **Transactions Over 1000**:
+```SELECT * FROM retail_sales
 WHERE total_sale > 1000;
-
-5. **Transactions by Gender & Category:
-SELECT gender, category, COUNT(transactions_id) AS total
+```
+6. **Transactions by Gender & Category**:
+```SELECT gender, category, COUNT(transactions_id) AS total
 FROM retail_sales
 GROUP BY gender, category
 ORDER BY gender, category;
-
-6. **Average Sale Per Month:
-SELECT 
+```
+7. **Average Sale Per Month**:
+```SELECT 
   MONTH(sale_date) AS month_number,
   DATENAME(MONTH, sale_date) AS sale_month,
   ROUND(AVG(total_sale), 0) AS average_sale
 FROM retail_sales
 GROUP BY MONTH(sale_date), DATENAME(MONTH, sale_date)
 ORDER BY month_number;
-
-7. **Best-Selling Year:
-SELECT YEAR(sale_date) AS year, ROUND(AVG(total_sale), 0) AS average_sale
+```
+8. **Best-Selling Year**:
+```SELECT YEAR(sale_date) AS year, ROUND(AVG(total_sale), 0) AS average_sale
 FROM retail_sales
 GROUP BY YEAR(sale_date)
 ORDER BY average_sale DESC;
-
-8. **Top 5 Customers by Total Sales:
-SELECT customer_id, SUM(total_sale) AS total_spent
+```
+9. **Top 5 Customers by Total Sales**:
+```SELECT customer_id, SUM(total_sale) AS total_spent
 FROM retail_sales
 GROUP BY customer_id
 ORDER BY total_spent DESC
 OFFSET 0 ROWS FETCH NEXT 5 ROWS ONLY;
-
-9. **Unique Customers per Category:
-SELECT category, COUNT(DISTINCT customer_id) AS unique_customers
+```
+10. **Unique Customers per Category**:
+```SELECT category, COUNT(DISTINCT customer_id) AS unique_customers
 FROM retail_sales
 GROUP BY category;
 ```
@@ -126,7 +127,7 @@ T-SQL (Transact-SQL)
 
 Git & GitHub for version control
 
-👤  Author
+👤 Author
 Ellias Sithole
 This project was built for SQL practice and real-world data analysis. Feel free to fork or improve the queries.
 
