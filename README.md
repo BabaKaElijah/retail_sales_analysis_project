@@ -118,7 +118,7 @@ Morning: 07:00 – 14:59
 Afternoon: 15:00 – 21:59
 
 Night: 22:00 – 06:59 (includes early morning hours)
-```js
+```sql
 WITH ShiftedSales AS (
   SELECT 
     CASE 
