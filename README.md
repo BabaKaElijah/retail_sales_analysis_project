@@ -46,11 +46,11 @@ SELECT DISTINCT category FROM retail_sales;
 ```
 ## 💼 Business Questions & SQL Answers
 
-**Sales on 2022-11-05**:
+1. **Sales on 2022-11-05**:
 ```sql
 SELECT * FROM retail_sales WHERE sale_date = '2022-11-05';
 ```
-1. **Clothing Orders ≥ 4 in Nov 2022**:
+2. **Clothing Orders ≥ 4 in Nov 2022**:
 ```sql
 SELECT * FROM retail_sales
 WHERE category = 'Clothing' AND MONTH(sale_date) = 11 AND quantity >= 4;
