@@ -133,10 +133,10 @@ FROM ShiftedSales
 GROUP BY shift;
 ```
 ## 🧰 Tools Used
+```
 SQL Server Management Studio (SSMS)
-
 T-SQL (Transact-SQL)
-
+```
 Git & GitHub for version control
 
 👤 Author
