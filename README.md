@@ -136,11 +136,12 @@ GROUP BY shift;
 ```
 SQL Server Management Studio (SSMS)
 T-SQL (Transact-SQL)
-```
 Git & GitHub for version control
-
+```
 👤 Author
+```
 Ellias Sithole
+```
 This project was built for SQL practice and real-world data analysis. Feel free to fork or improve the queries.
 
 
